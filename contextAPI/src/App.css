@@ -1,0 +1,21 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    background-color: #111;
+    color: aliceblue;
+}
+
+.btn{
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: '8px 16px'
+}
