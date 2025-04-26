@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { themeChange } from '../redux/themeSlice'
 import { translate } from '../redux/languageSlice'
+import { FaEye,FaEyeSlash } from "react-icons/fa";
+
+
+
+
 
 function LoginForm() {
 
@@ -10,7 +15,7 @@ function LoginForm() {
 
   const dispatch = useDispatch()
 
-  console.log(translateMode)
+  const [showPassword,setShowPassword] = useState(false)
 
   return (
     <>
@@ -30,11 +35,25 @@ function LoginForm() {
             className='p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400'
           />
 
-          <input
-            type="password"
-            placeholder="Password"
-            className='p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400'
-          />
+          <div
+            className=' border border-gray-300 rounded-md flex items-center focus:outline-none focus:ring-2 focus:ring-blue-400'>
+
+            <input
+              type={ showPassword === true ? "text" : "password"}
+              placeholder="Password"
+              className='w-full p-3 border-none outline-0 '
+            />
+
+            <div onClick={() => setShowPassword(!showPassword)} className='mr-3 cursor-pointer'>
+
+              {
+                showPassword === true ? <FaEyeSlash /> : <FaEye />
+
+              }
+
+            </div>
+
+          </div>
 
           <button className='mt-4 bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-md transition duration-300'>
             {
