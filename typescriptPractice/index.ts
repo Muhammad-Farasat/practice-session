@@ -197,3 +197,55 @@
 // }
 
 // checkAccessiility(Roles.Seller)
+
+
+
+// * QUESTION # 8
+
+// type direction = 'left' | 'right' | 'up' | 'down'
+
+// function showDirection(dir:direction):void{
+//     console.log("Moving towards", dir);
+// }
+
+// showDirection("left")
+
+
+// * QUESTION # 9
+
+// type User = {
+//     name: string
+// }
+
+// type Admin = {
+//     name: string
+//     isAdmin: Boolean
+// }
+
+// function CheckingRole(person: User | Admin):void{
+    
+//     if("isAdmin" in person){
+//         console.log(person.name, "is Admin.");
+//     }else{
+//         console.log(person.name, "is User.");
+//     }
+    
+// }
+
+// CheckingRole({name: "Farasat"})
+
+
+// * QUESTION # 10
+
+
+type tuples = string[] | number[]
+
+function convertTupleToString(tup:tuples):void{
+
+    let converted:string = tup.join()
+
+    console.log(converted);    
+
+}
+
+convertTupleToString([10, 22, 56])
